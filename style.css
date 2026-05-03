@@ -821,13 +821,81 @@ body::after {
 @media (max-width: 860px) {
   #intelligence-layout { grid-template-columns: 1fr; padding: 24px 16px; }
   #intelligence-sidebar { position: static; order: -1; display: none; }
-  .filter-inner { flex-direction: column; align-items: flex-start; }
-  .filter-group-areas { width: 100%; }
   .header-inner { padding: 0 16px; }
   .btn-header-action span { display: none; }
   .btn-header-action { padding: 7px 10px; }
+
+  /* Filter bar — tighter stacking */
+  .filter-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px 16px; }
+  .filter-group-areas { width: 100%; }
+  .area-pills { gap: 5px; }
+
+  /* Cards — reduce padding */
+  .news-card { padding: 18px 16px; }
+
+  /* Highlights — allow text to wrap instead of truncating */
+  .highlight-link { white-space: normal; overflow: visible; text-overflow: unset; }
+  .hl-row { flex-wrap: wrap; gap: 6px; }
+
+  /* Sales tab — collapse sidebar into a compact horizontal scroll row */
   .sales-layout { grid-template-columns: 1fr; }
-  .sales-sidebar { position: static; height: auto; }
+  .sales-sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .sales-filter-group { margin-bottom: 0; }
+  .sales-toggle-group { flex-direction: row; flex-wrap: wrap; }
+  .sales-checklist { flex-direction: row; flex-wrap: wrap; gap: 2px 10px; }
+  .sales-check-divider { display: none; }
+  .sales-main { padding: 20px 16px 40px; }
+
+  /* Chart — shorter on mobile */
+  .sales-chart-wrap { height: 280px; }
+
+  /* Action badge tooltip — anchor left so it doesn't clip off-screen */
+  .badge-action.has-tooltip::after {
+    right: auto;
+    left: 0;
+    max-width: min(240px, calc(100vw - 48px));
+  }
+  .badge-action.has-tooltip::before { right: auto; left: 12px; }
+}
+
+/* ── Small phones (≤ 480px) ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .brand-sub { display: none; }
+
+  /* Nav tabs — tighter */
+  .nav-tab { padding: 10px 12px 8px; font-size: 11px; }
+
+  /* Area & action pills — horizontal scroll instead of wrapping */
+  .area-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    /* hide scrollbar visually but keep functional */
+    scrollbar-width: none;
+  }
+  .area-pills::-webkit-scrollbar { display: none; }
+
+  /* Card headline — clamp to comfortable mobile size */
+  .card-headline { font-size: 17px; }
+
+  /* Edition title */
+  .edition-title { font-size: clamp(20px, 6vw, 28px); }
+
+  /* Executive summary */
+  .executive-summary p { font-size: 14.5px; }
+
+  /* So-what panel — slightly less padding */
+  .card-so-what { padding: 12px 14px; }
 }
 
 /* ── Scroll reveal ───────────────────────────────────────────────────── */
