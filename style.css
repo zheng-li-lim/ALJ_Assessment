@@ -33,7 +33,7 @@
   --nav-h:      44px;
   --filter-h:   52px;
   --sidebar-w:  260px;
-  --max-content:1200px;
+  --max-content: min(1600px, calc(100vw - 48px));
 
   --radius-sm: 3px;
   --radius:    4px;
@@ -359,6 +359,34 @@ body::after {
   color: var(--prussian);
   line-height: 1.75;
 }
+.exec-summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.exec-summary-list li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--prussian);
+  line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+}
+.exec-summary-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
 .ai-disclaimer {
   font-family: var(--font-sans);
   font-size: 11px;
@@ -382,13 +410,32 @@ body::after {
 .source-status { font-family: var(--font-sans); font-size: 12px; color: var(--muted); }
 
 /* Key actions */
-.ka-para {
-  margin-top: 14px;
+.ka-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
   padding-top: 14px;
   border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ka-list li {
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+}
+.ka-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  background: var(--red);
+  border-radius: 50%;
 }
 .ka-escalate { font-weight: 600; color: var(--red); }
 
@@ -816,6 +863,12 @@ body::after {
 
 /* ── Utility ─────────────────────────────────────────────────────────── */
 .hidden { display: none !important; }
+
+/* ── Wide desktop (≥ 1440px) ────────────────────────────────────────── */
+@media (min-width: 1440px) {
+  :root { --sidebar-w: 300px; }
+  #intelligence-layout { gap: 56px; }
+}
 
 /* ── Mobile notice ───────────────────────────────────────────────────── */
 .mobile-notice { display: none; }

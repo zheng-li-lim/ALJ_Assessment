@@ -58,7 +58,7 @@ Invoke SKILL-Frontend-Modified now. Design direction:
 - Intelligence tab:
   - Filter bar (sticky): Geography checklist dropdown (Middle East group + Europe group) | Area of Interest pills | Action type pills | Clear filters
   - Two-column layout: main content (left) + narrow sidebar (right)
-  - Main: edition summary section → highlights (by region) → full article cards
+  - Main: edition summary section (executive summary as gold bullet points + Act & Escalate actions as red bullet points) → highlights (by region) → full article cards
   - Sidebar: all editions listed newest to oldest with quality check status dot (✓/◑/○)
 - Sales Data tab: left sidebar filters + main chart area
 - No editorial panel. No API key input. No agent buttons.
@@ -180,7 +180,7 @@ Create `data.js` as an ES module. It is the single source of truth for all intel
 - Only reference a brand in a market where it is confirmed in `context/abc-context.txt`
 - Portfolio brands listed as "no specific market confirmed" must never be written as active distribution relationships
 - If no confirmed brand fits, write generically: "brands ABC distributes in [market]"
-- Apply Humanizer banned-word check to all text fields
+- Apply Humanizer banned-word check to all text fields. Key rules: no em-dashes as connective tissue (full stop or colon instead); no contrast constructions ("not X but Y", "rather than Y"); no urgency framing ("before X happens", "faster than planned"); no significance-announcing verbs ("marks the first time", "signals that", "represents a structural shift", "underscores", "highlights"); no attributive clause stacking (move context after the main claim); no fact-packing (lead with the recommendation, support with one or two examples); no implicit anxiety tone (state what needs to be done — do not frame the negative consequence as the driver).
 
 ---
 
@@ -193,14 +193,30 @@ Target publications:
 - Arab News, The National, Gulf News Auto
 - ICCT, best-selling-cars.com, Automotive News Europe
 
-For each period, find 8–12 real articles relevant to ABC's markets (Middle East + Europe) covering a spread of areas of interest. For each article:
+For each period, find 8–12 real articles relevant to ABC's markets (Middle East + Europe). For each article:
 - Verify the URL is real and the article exists before including it
 - Confirm the publication date falls within the target period
+
+**Before writing any content, apply the selection criteria:**
+
+Score each article on three dimensions (1–3 each):
+
+| Dimension | 3 | 2 | 1 |
+|---|---|---|---|
+| Brand proximity | Toyota, Lexus, or confirmed ABC Chinese brand partner (BYD, MG, GAC, Zeekr, Farizon) — verify in `context/abc-context.txt` | Competing brand in same market as ABC | Market-wide trend, no specific brand |
+| Geographic proximity | Saudi Arabia, Turkey, Egypt, Morocco (primary ABC markets) | UAE, Italy, Poland, UK (secondary/emerging) | Pan-Europe, Pan-MENA, or global with named regional angle |
+| Time horizon | Decision needed within 4 weeks → **Act & Escalate** | Decision needed within 1–2 quarters → **Assess** | Informational, no near-term decision → **FYI** |
+
+Sum the three scores. Round to 1–5 for the `relevance` field. Sort by score descending. Then apply coverage constraints: at least 1 item per area of interest, at least 4 MENA items, at least 4 Europe items, at least 1 Act & Escalate per edition. Fill 12 items per edition.
+
+Order the final items: Act & Escalate first (by score), then Assess (by score), then FYI (by score). Ties: MENA before Europe.
+
+Then for each selected item:
 - Write a 2–3 sentence summary
 - Write actionText and soWhat strictly against the brand-market matrix in `context/abc-context.txt`
 - Apply rule-based fact check and CSO review and bake the results into the item
 
-At minimum: one EDITION_LATEST (current or most recent completed period) and one EDITION_PREV. Aim for 10 items per edition with at least one "Act & Escalate" item per edition.
+At minimum: one EDITION_LATEST and one EDITION_PREV. Target 12 items per edition.
 
 ---
 

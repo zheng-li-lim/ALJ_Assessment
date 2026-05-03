@@ -196,10 +196,10 @@ function renderHighlights(items) {
 function renderKeyActions(items) {
   const escalate = items.filter(i => i.actionType === 'Act & Escalate');
   if (escalate.length === 0) return '';
-  const sentences = escalate
-    .map(i => `<span class="ka-escalate">${escHtml(i.actionText)}</span>`)
-    .join(' ');
-  return `<p class="ka-para">${sentences}</p>`;
+  const bullets = escalate
+    .map(i => `<li class="ka-escalate">${escHtml(i.actionText)}</li>`)
+    .join('');
+  return `<ul class="ka-list">${bullets}</ul>`;
 }
 
 // ─── Filter Bar ───────────────────────────────────────────────────────────────
@@ -326,9 +326,14 @@ function renderIntelligence() {
   });
 
   const summaryEl = document.getElementById('executive-summary');
-  if (summaryEl) summaryEl.innerHTML =
-    `<p>${escHtml(edition.executiveSummary)}</p>${renderKeyActions(filtered)}
+  if (summaryEl) {
+    const parts = edition.executiveSummary.split('. ').filter(s => s.trim().length > 0);
+    const bulletHtml = parts.length > 1
+      ? `<ul class="exec-summary-list">${parts.map(s => `<li>${escHtml(s.endsWith('.') ? s : s + '.')}</li>`).join('')}</ul>`
+      : `<p>${escHtml(edition.executiveSummary)}</p>`;
+    summaryEl.innerHTML = `${bulletHtml}${renderKeyActions(filtered)}
      <p class="ai-disclaimer">AI-generated briefing for strategic orientation only. All recommendations are indicative and require detailed fact-checking and analysis before any action is taken.</p>`;
+  }
 
   const filterStatus = document.getElementById('filter-status');
   if (filterStatus) {
@@ -480,8 +485,8 @@ function renderSalesData() {
         </label>`).join('')}
       </div>
     </div>
-    <div class="sales-filter-group">
-      <span class="sales-filter-label">Country</span>
+    <div class="sales-filter-group" ${isBrand ? 'style="opacity:.4;pointer-events:none"' : ''}>
+      <span class="sales-filter-label">Country ${isBrand ? '(n/a — brand data is Europe-wide)' : ''}</span>
       <div class="sales-checklist">
         <label class="sales-check-item sales-check-alleu">
           <input type="checkbox" class="sales-cb country-cb" value="All Europe" ${salesState.countries.includes('All Europe') ? 'checked' : ''}>

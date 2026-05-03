@@ -100,17 +100,41 @@ Remove every instance of the following. Do not replace with a synonym — restru
 - Dynamic (say what specifically changes)
 - Unique (say what specifically is different)
 
-**Hedge phrases:**
+**Hedge phrases and hedging-stacks:**
 - It could be argued that
 - One might consider
 - There may be potential to
 - It is possible that (unless expressing genuine uncertainty with a probability)
 - Some might say
+- "could potentially suggest" / "may possibly indicate" — choose a lane. Either it is certain enough to state directly, or flag the uncertainty once and move on. Do not stack hedges.
 
-**Em dash abuse:**
-- Em dashes used decoratively or for pace variation
-- Em dashes where a full stop or colon would be cleaner
-- More than one em dash per paragraph
+**Em dashes and en dashes:**
+- Em dashes as connective tissue between clauses: banned. If two ideas belong together, write them as one sentence or split into two. Use a full stop or a colon.
+- Em dashes to introduce an inline list: banned. Restructure as a separate sentence.
+- Em dashes acceptable only for a genuine parenthetical aside where no alternative is cleaner — and maximum one per paragraph.
+- En dashes in prose between words: banned. Use a comma or restructure.
+- En dashes in numerical ranges: acceptable (18–24 months, 2026–2027, pages 10–15).
+
+**Contrast constructions:**
+- "not X, but Y" → state Y directly
+- "X rather than Y" → state X directly
+- "instead of X" → say what is actually happening
+
+**Urgency and consequence framing:**
+- "before X happens" / "before it's too late" / "before [group] has updated its strategy"
+- "faster than [group] planned / expected"
+- "or it risks losing" / "or face losing"
+Replace these with: state the fact. Let the reader draw the implication. If the strategic point is sound it stands without the implied threat.
+
+**Announcing significance:**
+These tell the reader what to think. Describe what happened instead.
+- "marks the first time"
+- "represents a structural shift / reversal"
+- "signals that X is [adjective or arriving]"
+- "underscores" (as a sentence opener or filler verb)
+- "highlights" (as a sentence opener or filler verb)
+- "reflects" (as a sentence opener or filler verb)
+- "demonstrates" (as a sentence opener or filler verb)
 
 **Bullet gerunds:**
 Bullets must not start with a gerund (-ing word) unless it is a genuine action in an action plan.
@@ -151,6 +175,18 @@ Use: A short bridging sentence that states the logical connection, or simply mov
 **Passive voice:**
 Acceptable only when the actor is genuinely unknown or irrelevant. In all other cases, name the actor.
 
+**Attributive clause stacking:**
+Do not load multiple modifiers before a noun. Move context after the main claim or into a separate sentence.
+
+Bad: "a Golf-class Chinese hatchback sold through Stellantis dealerships in Europe, priced competitively against VW"
+Good: "The Leapmotor B05 is a Golf-class hatchback that sells through Stellantis dealerships in Europe. Autocar rated it as a credible alternative to the VW Golf."
+
+**Fact-packing:**
+Do not list every instance in the same sentence. Lead with the recommendation. Support with one or two illustrative examples.
+
+Bad: "ABC Motors should review agreements with BYD (Turkey, Egypt), GAC Motor (Egypt, Poland), Farizon (UAE, UK) and Zeekr (Italy) before local manufacturing removes the need for an import-based distributor."
+Good: "ABC Motors should review its distribution agreements with Chinese brand partners to confirm how each handles local manufacturing scenarios. The review is most relevant for BYD and GAC Motor."
+
 **Numbers:**
 - Round to the appropriate precision (SAR 240.86tn → SAR 241tn in prose; keep full precision in tables)
 - Never write "approximately" before a number you've estimated — use a range instead
@@ -173,6 +209,12 @@ A senior strategy consultant who has thought carefully about the topic and is te
 - Uses "but" not "however" in conversational registers
 - Numbers are used to anchor, not to decorate
 
+**Write to inform, not to persuade:**
+The reader is intelligent and draws their own conclusions. Do not editorialize or create artificial tension. State facts and implications clearly; do not manage the reader's emotional response to them.
+
+**No implicit anxiety:**
+Do not frame the negative consequence as the driver of an action. "ABC Motors should review its agreements before local manufacturing removes the need for an import-based distributor" is doing anxiety-work. "ABC Motors should review its agreements to confirm how each handles local manufacturing scenarios" is the same recommendation without the manufactured urgency. If the strategic point is sound, it stands on its own.
+
 **Register:**
 Match the register of the source text. A Chairman briefing is formal but not verbose. A Slack message is direct and short. An email is somewhere between. Do not impose formal language on casual registers or vice versa.
 
@@ -194,7 +236,7 @@ When given text to humanize, follow this sequence:
 
 **Step 6 — Read aloud test.** Would a senior MBB consultant read this aloud in a client meeting without wincing? If not, identify the specific sentence causing the problem and fix it.
 
-**Step 7 — Final check.** Count remaining em dashes (maximum one per paragraph), bullet gerunds (zero), and filler openers (zero).
+**Step 7 — Final check.** Scan for: em dashes used as connective tissue (zero), en dashes in prose between words (zero), contrast constructions (zero), urgency framing (zero), significance-announcing verbs (zero), attributive clause stacking (zero), fact-packing (zero), implicit anxiety tone (zero), bullet gerunds (zero), filler openers (zero).
 
 ---
 
