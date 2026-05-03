@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ABC Mobility Intelligence — Fortnightly automotive sector briefing">
+  <title>ABC Mobility Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header id="main-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-mark">ABC</span>
+        <div class="brand-divider"></div>
+        <div class="brand-text">
+          <span class="brand-name">Mobility Intelligence</span>
+          <span class="brand-sub">ABC · Fortnightly Briefing</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="btn-share-email" class="btn-header-action" title="Share as Email Newsletter">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,12 2,6"/>
+          </svg>
+          <span>Share as Email</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Navigation ─────────────────────────────────────────────────────── -->
+  <nav id="main-nav" role="tablist" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-tab active" data-tab="intelligence" role="tab" aria-selected="true">Intelligence</button>
+      <button class="nav-tab" data-tab="sales" role="tab" aria-selected="false">Sales Data</button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       Tab 1 — Intelligence
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div id="tab-intelligence" class="tab-content active" role="tabpanel">
+
+    <!-- Filter Bar -->
+    <div id="filter-bar">
+      <div class="filter-inner">
+
+        <div class="filter-group">
+          <span class="filter-label">Geography</span>
+          <div class="geo-select-wrapper">
+            <button id="geo-select-trigger" class="geo-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span id="geo-select-label">All markets</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div id="geo-dropdown" class="geo-dropdown hidden" role="listbox"></div>
+          </div>
+        </div>
+
+        <div class="filter-group filter-group-areas">
+          <span class="filter-label">Area of Interest</span>
+          <div id="area-pills" class="area-pills" role="group" aria-label="Filter by area of interest"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Action</span>
+          <div id="action-pills" class="area-pills" role="group" aria-label="Filter by action type"></div>
+        </div>
+
+        <button id="btn-clear-filters" class="btn-clear-filters hidden" aria-label="Clear all filters">
+          Clear filters
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Intelligence Layout: Main + Sidebar -->
+    <div id="intelligence-layout">
+
+      <main id="intelligence-main" role="main">
+
+        <!-- Edition Summary -->
+        <section id="edition-summary" aria-label="Edition summary">
+          <p class="edition-eyebrow">Fortnightly Briefing</p>
+          <h1 id="edition-title" class="edition-title">ABC Mobility Intelligence</h1>
+          <p id="edition-date" class="edition-date"></p>
+          <div id="executive-summary" class="executive-summary"></div>
+          <div class="edition-meta">
+            <span id="filter-status" class="filter-status hidden" role="status"></span>
+            <span id="source-status" class="source-status"></span>
+          </div>
+        </section>
+
+        <!-- Highlights -->
+        <section id="highlights-section" aria-label="Edition highlights">
+          <h2 class="section-label">This Edition</h2>
+          <div id="highlights-list" class="highlights-list"></div>
+        </section>
+
+        <!-- Full Cards -->
+        <section id="cards-section" aria-label="Intelligence cards">
+          <div id="cards-container" class="cards-container"></div>
+        </section>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="intelligence-sidebar" aria-label="Editions">
+        <h3 class="sidebar-label">Editions</h3>
+        <div id="editions-list"></div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       Tab 2 — Sales Data
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div id="tab-sales" class="tab-content" role="tabpanel">
+    <div id="sales-content"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

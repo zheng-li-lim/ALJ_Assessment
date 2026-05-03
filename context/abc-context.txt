@@ -1,0 +1,124 @@
+# ABC Business Context — For AI Agent Use
+# (Masked as ABC. Underlying entity: Abdul Latif Jameel / Jameel Motors.)
+
+Source: jameelmotors.com, alj.com — verified May 2026.
+Only confirmed brand-market pairings are listed. Unverified historical brands (Peugeot, Mitsubishi) removed.
+
+---
+
+## Who We Are
+
+ABC is a Saudi-headquartered private family conglomerate founded in 1945.
+Private family business. Operations in 30+ countries. 11,000+ employees, 40+ nationalities.
+Not a single legal entity — a group of distinct companies collectively referred to as ABC.
+
+For this intelligence briefing, we focus exclusively on ABC's automotive business:
+vehicle distribution, aftermarket, and the auto financing that enables vehicle sales.
+
+---
+
+## Brand × Market Matrix — Confirmed Only
+
+Source: jameelmotors.com/en/our-story/ and alj.com news. Last verified May 2026.
+
+### Passenger & Commercial Vehicles
+
+| Brand          | Saudi Arabia | Turkey | Morocco | Egypt | UAE  | Italy | Poland | UK        |
+|----------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Toyota         | ✓  | ✓  | ✓  | ✓  | —  | —  | —  | —  |
+| Lexus          | ✓  | ✓  | ✓  | ✓  | —  | —  | —  | —  |
+| BYD            | —  | ✓  | —  | ✓  | —  | —  | —  | —  |
+| Ford           | —  | —  | —  | ✓  | —  | —  | —  | —  |
+| MG Motor       | —  | —  | ✓  | ✓  | —  | —  | —  | —  |
+| GAC Motor      | —  | —  | —  | ✓  | —  | — | ◐  | —  |
+| Zeekr          | —  | —  | —  | —  | —  | ✓* | — | —  |
+| JMC            | —  | —  | ✓* | —  | —  | —  | —  | —  |
+
+### Commercial Vehicles / EVs
+
+| Brand          | Saudi Arabia | Turkey | Morocco | Egypt | UAE  | Poland | UK        |
+|----------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| HINO Trucks    | —  | —  | —  | ✓  | —  | —  | —  |
+| Ford Trucks    | —  | —  | —  | ✓  | —  | —  | —  |
+| Farizon (EVs)  | —  | —  | —  | —  | ✓* | ◐  | ◐  |
+
+✓ = confirmed operational on official ABC/Jameel website
+✓* = formally announced partnership / launch event confirmed
+◐ = presence indicated (Jameel Motors Polska entity exists; Farizon V7E shown at Birmingham CV Show) but full distribution agreement not detailed publicly
+— = not present / no evidence
+
+### Not confirmed on current official website (historical / uncertain)
+- Peugeot — mentioned in 2021 corporate presentation, not on current jameelmotors.com
+- Mitsubishi — same
+- Changan — listed as portfolio brand on jameelmotors.com but no specific market confirmed
+- Geely Auto — listed as portfolio brand but no specific market confirmed
+- Algeria — market referenced historically but no brand-market pairing confirmed
+- Australia, Japan — listed as markets in 2021 doc; no current brand detail available
+
+---
+
+## Business Units in Scope
+
+### 1. ABC Motors (formerly Jameel Motors)
+- Toyota and Lexus: distributed in Saudi Arabia (exclusive since 1955, ~50% KSA market share), Turkey, Morocco, Egypt
+- BYD: distributed in Turkey (since 2023) and Egypt
+- MG Motor: Morocco and Egypt
+- GAC Motor: Egypt (flagship store opened Cairo, 2023); Jameel Motors Polska entity active
+- Zeekr: Italy (Jameel Motors Italia — launched February 2026)
+- Farizon Auto (commercial EVs): UAE announced; Farizon V7E shown at Birmingham Commercial Vehicle Show (UK); 11-country global agreement announced
+- HINO Trucks, Ford Trucks: Egypt
+- JMC (commercial vehicles): Morocco (announced November 2025)
+- OTOShops (multi-brand pre-owned): Turkey
+- Auto Store (multi-brand new and pre-owned): Egypt
+
+### 2. Automotive Aftermarket
+- Parts engineering, manufacturing and distribution: FBK, DJ Parts, Qsten, LKW Teile (European truck parts)
+- Repair and service solutions: autohub, coolite, Zeed
+- Accessories: TADME (Toyota Accessories Development Middle East) — only TMC joint venture with a distributor for accessories development
+- NSV (Leaders in Vehicle Integration)
+- Joint ventures with Denso and Toyota for aftermarket operations
+
+### 3. ABC Financial Services — Auto Financing Only
+- ABC United Finance: SAMA-licensed auto instalment credit and leasing (Saudi Arabia)
+- ABC Finans: Turkey auto financing
+- ABC Sigorta: Turkey auto insurance
+- ABC Finance Egypt
+- ABC Insurance (Saudi Arabia)
+
+---
+
+## Key Geographies
+
+**Saudi Arabia** — largest market. Toyota/Lexus exclusive distributor. Aftermarket. Auto financing.
+**Turkey** — Toyota, Lexus, BYD distribution. OTOShops pre-owned. ABC Finans.
+**Morocco** — Toyota, Lexus, MG Motor, JMC distribution.
+**Egypt** — Toyota, Lexus, BYD, Ford, MG Motor, GAC Motor, HINO, Ford Trucks. Auto Store. ABC Finance Egypt.
+**UAE** — Farizon commercial EV distribution announced.
+**Italy** — Zeekr premium EV (announced February 2026).
+**Poland** — Jameel Motors Polska entity active; likely GAC distribution.
+**UK** — Farizon commercial vehicle presence (CV Show Birmingham). LKW Teile truck parts.
+**China** — Shenzhen office opened 2024. Partner management for GAC, Changan, Farizon, Zeekr, Geely.
+
+---
+
+## Strategic Priorities
+
+1. **EV transition management** — Toyota ICE dominance shifting to EV. Dealer network, technician training, charging infrastructure partnerships across all Toyota markets.
+2. **Chinese EV distribution expansion** — Active in Egypt (GAC, BYD), UAE (Farizon), Italy (Zeekr), Poland (GAC likely), UK (Farizon CV). 11-country Farizon agreement not yet fully public.
+3. **Protecting KSA Toyota market share** — ~50% KSA share under pressure from BYD direct entry and Vision 2030 EV incentives.
+4. **Aftermarket growth** — EV servicing capabilities. TADME moat with Toyota/Lexus accessories.
+5. **Financing conditions** — SAMA (KSA), TCMB (Turkey), CBE (Egypt) rates affect vehicle affordability and ABC loan volumes directly.
+
+---
+
+## What "So What for ABC" Means
+
+Name the specific business unit: ABC Motors, Automotive Aftermarket, or ABC Finance.
+State a concrete action or risk in one sentence. Active voice. Specific timeframe where possible.
+
+Good: "ABC Motors Egypt should brief its GAC dealer network before the Q3 inventory order given the EGP devaluation impact on import costs."
+Bad: "This is relevant to ABC's mobility business and should be monitored."
+
+---
+
+*Last updated: May 2026. Source: jameelmotors.com, alj.com — confirmed data only.*

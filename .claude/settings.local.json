@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node serve.mjs)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://localhost:3001/)",
+      "Bash(curl -s http://localhost:3001/app.js)",
+      "Bash(curl -s http://localhost:3001/data.js)",
+      "Bash(curl -s http://localhost:3001/sales-data.js)",
+      "Bash(curl -s -o /dev/null -w \"index.html: %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"app.js: %{http_code}\\\\n\" http://localhost:3000/app.js)",
+      "Bash(curl -s -o /dev/null -w \"data.js: %{http_code}\\\\n\" http://localhost:3000/data.js)",
+      "Bash(curl -s -o /dev/null -w \"sales-data.js: %{http_code}\\\\n\" http://localhost:3000/sales-data.js)",
+      "Bash(curl -s -o /dev/null -w \"agent-factcheck.js: %{http_code}\\\\n\" http://localhost:3000/agent-factcheck.js)",
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(/usr/bin/git --version)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/**)",
+      "Bash(/opt/homebrew/bin/brew --version)",
+      "Bash(/usr/local/bin/brew --version)",
+      "Bash(git --version)"
+    ]
+  }
+}
