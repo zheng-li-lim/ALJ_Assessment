@@ -23,7 +23,12 @@
       "Read(//opt/**)",
       "Bash(/opt/homebrew/bin/brew --version)",
       "Bash(/usr/local/bin/brew --version)",
-      "Bash(git --version)"
+      "Bash(git --version)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(ssh-keyscan github.com)"
     ]
   }
 }

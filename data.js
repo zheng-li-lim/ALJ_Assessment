@@ -5,15 +5,15 @@ export const SEED_VERSION = 4;
 export const AREA_COLORS = {
   'Regulations':             '#002B5C',
   'Product Innovation':      '#4A6F8A',
-  'Retail Innovation':       '#BCA26A',
+  'Retail Innovation':       '#c9a84c',
   'Competition':             '#C8102E',
-  'Supply Chain':            '#63666A',
-  'Other Interesting News':  '#2D8CC0',
+  'Supply Chain':            '#5b6770',
+  'Other Interesting News':  '#2dccd3',
 };
 
 export const ACTION_COLORS = {
-  'FYI':            '#63666A',
-  'Assess':         '#BCA26A',
+  'FYI':            '#5b6770',
+  'Assess':         '#c9a84c',
   'Act & Escalate': '#C8102E',
 };
 

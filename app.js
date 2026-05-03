@@ -104,7 +104,7 @@ function relevanceDots(score) {
 // ─── Card Renderer ────────────────────────────────────────────────────────────
 
 function renderCard(item) {
-  const actionColor   = ACTION_COLORS[item.actionType] || '#63666A';
+  const actionColor   = ACTION_COLORS[item.actionType] || '#5b6770';
   const actionDef     = ACTION_DEFINITIONS[item.actionType] || '';
   const isCsoRemoved  = item.csoReview?.verdict === 'Remove';
   const isCsoRevise   = item.csoReview?.verdict === 'Revise';
@@ -116,7 +116,7 @@ function renderCard(item) {
   if (isFactFlagged) extraClass += ' card-fact-flagged';
 
   const areaTags = item.areasOfInterest.map(area => {
-    const c = AREA_COLORS[area] || '#63666A';
+    const c = AREA_COLORS[area] || '#5b6770';
     return `<span class="tag tag-area" style="background:${c}">${escHtml(area)}</span>`;
   }).join('');
 
@@ -179,7 +179,7 @@ function renderHighlights(items) {
     .map(region => {
       const rows = sections[region].map(item => {
         const tags = item.areasOfInterest.map(a =>
-          `<span class="hl-tag" style="background:${AREA_COLORS[a] || '#63666A'}">${escHtml(a)}</span>`
+          `<span class="hl-tag" style="background:${AREA_COLORS[a] || '#5b6770'}">${escHtml(a)}</span>`
         ).join('');
         return `<li class="hl-row">
           <a href="#${escHtml(item.id)}" class="highlight-link">${escHtml(item.headline)}</a>
@@ -736,7 +736,7 @@ function shareAsEmail() {
     .filter(r => sections[r].length > 0)
     .map(region => {
       const rows = sections[region].map(item => {
-        const tags = item.areasOfInterest.map(a => emailTag(a, AREA_COLORS[a] || '#63666A')).join('');
+        const tags = item.areasOfInterest.map(a => emailTag(a, AREA_COLORS[a] || '#5b6770')).join('');
         return `<tr>
           <td style="padding:11px 0;border-bottom:1px solid #e0e0e0;font-size:15px;line-height:1.45;color:#111;font-weight:500;">${escHtml(item.headline)}</td>
           <td style="padding:11px 0 11px 16px;border-bottom:1px solid #e0e0e0;white-space:nowrap;vertical-align:middle;">${tags}</td>
@@ -755,8 +755,8 @@ function shareAsEmail() {
     : '';
 
   const cardsHtml = items.map(item => {
-    const actionColor = ACTION_COLORS[item.actionType] || '#63666A';
-    const areaTags    = item.areasOfInterest.map(a => emailTag(a, AREA_COLORS[a] || '#63666A')).join('');
+    const actionColor = ACTION_COLORS[item.actionType] || '#5b6770';
+    const areaTags    = item.areasOfInterest.map(a => emailTag(a, AREA_COLORS[a] || '#5b6770')).join('');
     const geoTags     = item.geographies.map(g =>
       `<span style="display:inline-block;padding:3px 10px;border-radius:3px;font-size:12px;font-weight:600;border:1.5px solid #999;color:#333;margin:2px 3px;">${escHtml(g)}</span>`
     ).join('');
@@ -769,8 +769,8 @@ function shareAsEmail() {
         <strong>Action:</strong> ${escHtml(item.actionText)}
         &nbsp;<span style="display:inline-block;padding:3px 10px;border-radius:3px;font-size:12px;font-weight:700;color:#fff;background:${actionColor};">${escHtml(item.actionType)}</span>
       </p>
-      <div style="background:#faf6ee;border-left:4px solid #BCA26A;padding:14px 18px;border-radius:0 4px 4px 0;margin-top:16px;">
-        <p style="margin:0 0 6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#8a6b2a;font-family:Arial,sans-serif;">So What for ABC</p>
+      <div style="background:#faf6ee;border-left:4px solid #c9a84c;padding:14px 18px;border-radius:0 4px 4px 0;margin-top:16px;">
+        <p style="margin:0 0 6px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#8a6f32;font-family:Arial,sans-serif;">So What for ABC</p>
         <p style="margin:0;font-size:14px;color:#111;line-height:1.6;font-family:Georgia,serif;">${escHtml(item.soWhat)}</p>
       </div>
     </div>`;
@@ -783,8 +783,8 @@ function shareAsEmail() {
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Georgia, serif; background: #eeeae3; color: #111; }
 #toolbar { position: sticky; top: 0; z-index: 100; background: #002B5C; color: #fff; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; font-family: Arial, sans-serif; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
-#toolbar button { background: #BCA26A; color: #fff; border: none; padding: 8px 20px; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 700; }
-#toolbar button:hover { background: #a8914f; }
+#toolbar button { background: #c9a84c; color: #fff; border: none; padding: 8px 20px; border-radius: 3px; cursor: pointer; font-size: 14px; font-weight: 700; }
+#toolbar button:hover { background: #a88a3d; }
 #email-body { max-width: 700px; margin: 0 auto; padding: 0 20px 60px; }
 </style>
 </head><body>
@@ -794,7 +794,7 @@ body { margin: 0; font-family: Georgia, serif; background: #eeeae3; color: #111;
 </div>
 <div id="email-body">
   <div style="background:#002B5C;padding:40px 48px 36px;">
-    <p style="margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#BCA26A;font-family:Arial,sans-serif;font-weight:700;">Fortnightly Briefing</p>
+    <p style="margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#c9a84c;font-family:Arial,sans-serif;font-weight:700;">Fortnightly Briefing</p>
     <h1 style="margin:0 0 10px;font-size:30px;font-weight:700;color:#fff;line-height:1.2;font-family:Georgia,serif;">ABC Mobility Intelligence</h1>
     <p style="margin:0;font-size:16px;color:rgba(255,255,255,.85);font-family:Arial,sans-serif;">${escHtml(edition.dateRange)}</p>
   </div>
