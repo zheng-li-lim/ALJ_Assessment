@@ -1,120 +1,92 @@
 # ABC Mobility Intelligence
 
-> Assessment submission — Zheng Li Lim · [limzl1804@gmail.com](mailto:limzl1804@gmail.com)
+> Assessment submission by Zheng Li Lim. Questions: [limzl1804@gmail.com](mailto:limzl1804@gmail.com)
 
-ABC is a hypothetical company built for this assessment. It is modelled on a real international automotive conglomerate: private, family-owned, with operations across the Middle East and Europe spanning vehicle distribution, aftermarket, and consumer auto financing. All brands, markets, and business units in the app reflect that profile, presented under the ABC name.
-
----
-
-## A fortnightly brief that tells ABC what to do, not just what happened
-
-Two people read this: the Chief Strategy Officer and the Chairman. Each edition covers the Middle East and European automotive markets. Every item is classified by topic, tagged to a geography, scored for relevance to ABC specifically, and assigned a required action. The output is a decision-ready brief, not a news digest.
-
-**Six topics:**
-- **Regulations** — emissions rules, government mandates, policy changes
-- **Competition** — rival brand moves, new entrants, market share shifts
-- **Product Innovation** — new vehicle launches, technology developments
-- **Retail Innovation** — dealership models, digital sales, customer experience
-- **Supply Chain** — logistics, manufacturing, sourcing disruptions
-- **Other Interesting News** — broader developments with indirect ABC relevance
-
-**Three action levels, every item gets one:**
-- **FYI** — worth knowing, no action needed now
-- **Assess** — needs further analysis before a decision
-- **Act & Escalate** — requires a response from leadership
-
-**Other features:**
-- **Executive Summary** — 3–4 sentences, conclusion first, written for a 15-minute read
-- **Filters** — by geography, topic, and action type, combinable
-- **Fact check** — flags items with inconsistent claims or implausible geography tags
-- **CSO review** — removes vague items, flags anything that doesn't name a specific ABC business unit
-- **Sales Data tab** — European passenger car registrations by brand and market, 2023–2025
-- **Email export** — one click, formatted newsletter, ready to send
+ABC is a hypothetical vehicle distribution company for this assessment, modelled on a real international automotive group with operations in the Middle East and Europe.
 
 ---
 
-## All content is static. It was researched and hardcoded manually for this assessment.
+## What it does
 
-No live API calls. No data fetching at runtime. The pipeline below shows how the pieces fit together.
+A fortnightly automotive intelligence brief for ABC's leadership and strategy teams. Each edition covers the Middle East and European markets. Items are classified by topic, scored for relevance to ABC, and assigned one of three action levels.
 
-```
-SOURCE DATA
-  Company context    jameelmotors.com · alj.com
-                     Confirmed brand × market matrix: which ABC brand in which country
-                     Business units: ABC Motors · Automotive Aftermarket · ABC Finance
+**Topics:** Regulations, Competition, Product Innovation, Retail Innovation, Supply Chain, Other Interesting News.
 
-  News               11 sources: Autocar · Bloomberg · The Guardian · InsideEVs
-                     SMMT · ICCT · Best Selling Cars Blog · TechCrunch · and others
-                     Middle East and Europe only — no item included without a clear
-                     MENA or Europe angle
+**Action levels:**
+- **FYI**: worth knowing, no immediate action needed
+- **Assess**: warrants analysis before decision
+- **Act & Escalate**: highly likely to require a leadership response, immediate analysis required
 
-  Sales data         best-selling-cars.com (ACEA-based)
-                     EU + EFTA + UK · Passenger vehicles · 2023–2025
-
-        ↓
-
-CLASSIFICATION (applied to each news item)
-  Topic              one of six areas of interest
-  Geography          country or region
-  Relevance          scored 1–3 against ABC's confirmed brand × market positions
-  Action type        FYI / Assess / Act & Escalate
-  Action text        one sentence on what ABC should do
-  So-what            named ABC business unit + concrete implication
-
-        ↓
-
-QUALITY CHECKS
-  Fact check         internal consistency, geography plausibility
-  CSO review         vague so-whats flagged, weak items removed
-
-        ↓
-
-OUTPUT
-  12 intelligence cards per edition
-  Executive summary · highlights list · sales charts · email export
-```
+**The brief also includes:**
+- An executive summary at the top of each edition
+- Filters by geography, topic, and action type
+- Past editions readily available for reference
+- A fact-check layer and a CSO review layer on each item
+- A European car sales data tab covering 2023 to 2025
+- One-click email export for easy newsletter sharing
 
 ---
 
-## Each part of the brief has a job — here is what to read and why
+## How the news intelligence works
 
-**Executive Summary.** Written conclusion-first. The most important development this fortnight is the opening sentence. Read this alone and you know the edition's verdict.
+Items are sourced from 11 publications covering the Middle East and Europe. Anything without a clear MENA or Europe angle is excluded.
 
-**Highlights list.** All 12 items grouped by region, each linking to its full card below. Use it to decide in 60 seconds what deserves your full attention.
+**Sources:** Autocar, Bloomberg, The Guardian, InsideEVs, SMMT, ICCT, Best Selling Cars Blog, TechCrunch, and others.
 
-**Each card has seven layers:**
-1. Topic tag (coloured) and geography tag — what and where
-2. Headline — action-oriented, not descriptive
-3. Source and date — click the source name to read the original article
-4. Summary — two sentences, Middle East or Europe angle stated explicitly
-5. Relevance score — 1 to 3 gold dots, relative to ABC's business
-6. Action badge — FYI / Assess / Act & Escalate
-7. So what for ABC? — names the specific business unit, states the concrete implication
+Each item is tagged with:
+- Topic (one of six)
+- Geography (country or region)
+- Relevance score (1 to 3, relative to ABC's confirmed brand and market positions)
+- Action type (FYI / Assess / Act & Escalate)
+- Action text (what ABC should do)
+- So-what (which ABC business unit is affected and how)
 
-**Filters.** Combine geography, topic, and action type. The summary updates to show how many items are visible versus the full edition.
+Two quality checks run before an item appears in the edition. Fact check reviews internal consistency and geography plausibility. CSO review removes items with weak or vague so-whats.
 
-**Sales Data tab.** European registration figures for Toyota, BYD, MG, and others — brands that map directly to ABC's distribution and competitive position. Toggle between volume and market share. Use the table for the underlying numbers.
-
-**Share as Email.** Top right. Generates a formatted newsletter from the current view, active filters included.
+ABC's brand and market matrix is maintained in a context file sourced from jameelmotors.com and alj.com, verified May 2026. No brand is referenced in a market without confirmation from that file.
 
 ---
 
-## This is a proof of concept. Five builds would make it production-ready.
+## How the sales data works
 
-**1. Automated refresh via live API calls**
-The app currently holds one hardcoded edition. A production build would run scheduled API calls to classify new articles, update the edition, and complete fact-check and CSO review passes on a fortnightly cycle. The author only sees the output.
+European passenger car registration figures are sourced from best-selling-cars.com, which compiles data from ACEA. Coverage spans the EU, EFTA, and the UK for 2023 through 2025, passenger vehicles only.
 
-**2. Real-time sales data from primary sources**
-Sales figures currently come from a secondary aggregator (best-selling-cars.com). A production build pulls directly from ACEA, SMMT, and JATO — the primary registration data providers for Europe and the Middle East — on a monthly cycle. This removes the aggregator lag and gives the CSO figures she can cite in board materials.
+Brands tracked include Toyota, BYD, MG, Volkswagen, and Stellantis, among others relevant to ABC's competitive position.
 
-**3. A single orchestrating agent handles refresh, review, and distribution**
-Today the author manually triggers each step. The next build adds one orchestrating agent: it runs the news fetch, classification, fact check, and CSO review on schedule, then sends the draft to the author for a single approval before the newsletter goes out. The author's only job is to read and send.
+The Sales Data tab supports filtering by brand and country, a toggle between volume and market share, and a full data table below the chart.
 
-**4. Specialist agents review what the news means for each part of ABC**
-The current CSO review applies one perspective to every item. A production build runs four agents in parallel: Sales (revenue and volume implications), Commercial (supplier and partner relationships), and a Country Head agent for each of ABC's key markets. Each reads the same item and returns a different so-what. The author sees all four views before signing off.
+---
 
-**5. Engagement tracking closes the loop on what gets read**
-There is currently no feedback mechanism. A production build tracks which cards readers open, which action types prompt follow-up, and which topics generate the most response. That data feeds back into how future editions are classified and prioritised. The briefing gets sharper the more it is used, without the author updating the criteria each time.
+## How to read an edition
+
+**Start with the executive summary.** The most important development this fortnight is the first sentence.
+
+**Scan the highlights list.** All 12 items grouped by region, each linking to its full card. Use it to prioritise before reading in full.
+
+**Each card contains:**
+1. Topic and geography tags
+2. Headline, rewritten to be action-oriented rather than descriptive
+3. Source and publication date
+4. Two-sentence summary with the MENA or Europe angle stated explicitly
+5. Relevance score (1 to 3 gold dots)
+6. Action badge
+7. So what for ABC: business unit named, implication stated
+
+Use the filters to narrow by geography, topic, or action type. The summary updates to reflect how many items are showing.
+
+Share as Email (top right) generates a formatted newsletter from the current view, active filters included.
+
+---
+
+## What a production version would add
+
+The current app is static. Content was researched and hardcoded for this assessment. Five additions would make it production-ready:
+
+1. Scheduled API calls to auto-refresh news, run quality checks, and deliver a draft edition to the author on a fortnightly cycle.
+2. Live sales data pulled directly from ACEA, SMMT, and JATO instead of a secondary aggregator.
+3. An orchestrating agent that runs the full pipeline end to end, with one author approval step before the newsletter goes out.
+4. Specialist agents for Sales, Commercial, and Country Head functions, each generating a function-specific so-what for every item in parallel.
+5. Engagement tracking that feeds reader behaviour back into how future editions are classified, so the brief improves over time without the author manually updating the criteria.
 
 ---
 
