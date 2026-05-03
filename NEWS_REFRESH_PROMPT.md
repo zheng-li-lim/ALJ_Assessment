@@ -147,8 +147,8 @@ Rules:
 
 **Content quality:**
 - summary: 2–3 sentences, MENA or Europe angle explicit
-- actionText: one concrete sentence, what ABC should do
-- soWhat: one sentence, names specific ABC business unit, concrete implication
+- actionText: one concrete sentence, what ABC should do — appears in the edition key actions summary (red bullets), not on the card
+- soWhat: one sentence, names specific ABC business unit, concrete implication — displayed on the card
 
 ---
 
@@ -174,7 +174,7 @@ Fix all issues before writing results. Every item should reach `{confidence:'Hig
 
 ## Step 5 — Write the executive summary
 
-3–4 sentences. Open with the single most significant development. Conclusion first. Name companies, geographies, figures where available. End with the most important action implication for ABC. If there is an "Act & Escalate" item, the summary must reflect that urgency. Banned words apply.
+3–4 sentences of news developments only. Open with the single most significant development. Name companies, geographies, and figures where available. Do not include action sentences — actions are pulled automatically from Act & Escalate items' `actionText` fields and rendered separately as red bullet points below the summary. Banned words apply.
 
 ---
 

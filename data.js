@@ -1,6 +1,6 @@
 // data.js — Seed editions + configuration constants
 // Increment SEED_VERSION whenever seed edition content changes — forces localStorage refresh
-export const SEED_VERSION = 5;
+export const SEED_VERSION = 6;
 
 export const AREA_COLORS = {
   'Regulations':             '#002B5C',
@@ -44,7 +44,7 @@ export const EDITION_LATEST = {
   id: 'edition-2026-05-03',
   dateRange: '20 Apr – 3 May 2026',
   publishedAt: '2026-05-03T09:00:00Z',
-  executiveSummary: 'Hongqi is in discussions to produce vehicles at a Stellantis plant in Spain, and Leapmotor and Stellantis are separately exploring co-development of new EV platforms. European BEV sales rose 25% in Q1 2026, with March up 42% year-on-year. Volkswagen has priced the ID Polo at £22,000 and Citroën has confirmed an EV below £15,000. ABC Motors should review its distribution agreements with Chinese brand partners to confirm how each agreement handles local manufacturing scenarios.',
+  executiveSummary: 'Hongqi is in discussions to produce vehicles at a Stellantis plant in Spain, and Leapmotor and Stellantis are separately exploring co-development of new EV platforms. European BEV sales rose 25% in Q1 2026, with March up 42% year-on-year. Volkswagen has priced the ID Polo at £22,000 and Citroën has confirmed an EV below £15,000.',
   sourcesTotal: 11,
   sourcesFetched: 8,
   items: [
@@ -216,7 +216,7 @@ export const EDITION_PREV = {
   id: 'edition-2026-04-19',
   dateRange: '6 Apr – 19 Apr 2026',
   publishedAt: '2026-04-19T09:00:00Z',
-  executiveSummary: 'Lucid Motors appointed a new CEO this fortnight and secured fresh investment from Uber and the Saudi PIF, which owns 60% of the company. The Beijing Motor Show launched 252 new vehicles across 17 halls, with Chinese domestic brands accounting for the majority. EU policy changes on truck CO2 charges and biofuel sourcing add cost pressure for fleet operators in ABC\'s European markets. ABC Motors should assess the Lucid development in Saudi Arabia and request export roadmaps from BYD and GAC Motor following the Beijing Show.',
+  executiveSummary: 'Lucid Motors appointed a new CEO this fortnight and secured fresh investment from Uber and the Saudi PIF, which owns 60% of the company. The Beijing Motor Show launched 252 new vehicles across 17 halls, with Chinese domestic brands accounting for the majority. EU policy changes on truck CO2 charges and biofuel sourcing add cost pressure for fleet operators in ABC\'s European markets.',
   sourcesTotal: 11,
   sourcesFetched: 5,
   items: [

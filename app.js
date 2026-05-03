@@ -146,8 +146,6 @@ function renderCard(item) {
     <span class="badge-action has-tooltip" style="background:${actionColor}" data-tooltip="${escHtml(actionDef)}">${escHtml(item.actionType)}</span>
   </div>
 
-  <p class="card-action-text">${escHtml(item.actionText)}</p>
-
   <div class="card-so-what">
     <p class="so-what-label">So What for ABC</p>
     <p class="so-what-text">${escHtml(item.soWhat)}</p>
@@ -199,7 +197,7 @@ function renderKeyActions(items) {
   const bullets = escalate
     .map(i => `<li class="ka-escalate">${escHtml(i.actionText)}</li>`)
     .join('');
-  return `<ul class="ka-list">${bullets}</ul>`;
+  return `<p class="ka-label">Key actions</p><ul class="ka-list">${bullets}</ul>`;
 }
 
 // ─── Filter Bar ───────────────────────────────────────────────────────────────

@@ -49,10 +49,10 @@ The brief is designed for a 15-minute read. The executive summary is the primary
 
 Each edition covers a two-week period. It contains:
 
-- An executive summary rendered as bullet points, one per key development, with the required action for ABC as the final bullet
+- An executive summary rendered as gold bullet points — news developments only. No action sentences. Each bullet is one key market development from the fortnight.
+- A key actions panel rendered as red bullet points directly below, one per Act & Escalate item, pulled from each item's `actionText` field. Labelled "Key actions" to make the distinction explicit.
 - A highlights list (all items grouped by region, each linking to its full card)
 - Up to 12 full intelligence cards
-- A key actions callout rendered as red bullet points, one per Act & Escalate item, showing the actionText for each
 
 The 12-item limit is deliberate. More than 12 items at card depth exceeds a 15-minute read and dilutes the signal-to-noise ratio for a Chairman-level audience. Items are selected for relevance score and coverage across the six topic areas.
 
@@ -74,8 +74,8 @@ The core unit of content. Each card contains the following fields:
 | `summary` | Two sentences. The MENA or Europe angle is stated explicitly, not implied. |
 | `relevance` | Integer 1–5. Scored relative to ABC's confirmed brand and market positions. |
 | `actionType` | One of: FYI, Assess, Act & Escalate. |
-| `actionText` | One sentence. What ABC should specifically do. Active voice. |
-| `soWhat` | One sentence. Names the ABC business unit. States a concrete implication. |
+| `actionText` | One sentence. What ABC should specifically do. Active voice. Used in the edition's key actions summary (red bullets); not displayed on the card itself. |
+| `soWhat` | One sentence. Names the ABC business unit. States a concrete implication. Displayed on the card. |
 | `factCheck` | Object: confidence level (High / Medium / Low), flag (boolean), note (one sentence). |
 | `csoReview` | Object: verdict (Keep / Revise / Remove), reason (one sentence). |
 

@@ -82,8 +82,7 @@ FYI | Assess | Act & Escalate
 - 2–3 sentence summary
 - Relevance dots (1–5, gold for 4–5)
 - Action badge (FYI / Assess / Act & Escalate — colour-coded)
-- Action text paragraph
-- "So What for ABC" panel (teal left border, distinct background)
+- "So What for ABC" panel (teal left border, distinct background) — actionText is not shown on the card; it appears only in the edition's key actions summary
 - Fact check flag if `factCheck.flag === true` (amber warning)
 - CSO review note if `csoReview.verdict === 'Revise'` (amber) or `'Remove'` (red strikethrough)
 
@@ -156,7 +155,7 @@ Create `data.js` as an ES module. It is the single source of truth for all intel
 - `EDITION_PREV` — the previous fortnightly edition object.
 - `SEED_EDITION` — set equal to `EDITION_LATEST`. Used by `app.js` as the default view on first load.
 
-**Edition object shape:** Each edition has: an `id` string formatted as `edition-YYYY-MM-DD` using the period end date; a `dateRange` string in the format `DD Mon – DD Mon YYYY`; a `publishedAt` ISO timestamp; an `executiveSummary` string of 3–4 sentences written conclusion-first; a `sourcesTotal` integer; a `sourcesFetched` integer; and an `items` array of news item objects.
+**Edition object shape:** Each edition has: an `id` string formatted as `edition-YYYY-MM-DD` using the period end date; a `dateRange` string in the format `DD Mon – DD Mon YYYY`; a `publishedAt` ISO timestamp; an `executiveSummary` string of 3–4 sentences covering news developments only — no action sentences (actions are rendered separately from Act & Escalate items' actionText fields); a `sourcesTotal` integer; a `sourcesFetched` integer; and an `items` array of news item objects.
 
 **News item shape:** Each item has the following fields:
 - `id` — string with prefix `l-` for latest edition items, `p-` for previous edition items, followed by a zero-padded number (e.g. `l-001`)
