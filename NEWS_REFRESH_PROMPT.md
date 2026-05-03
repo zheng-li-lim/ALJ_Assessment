@@ -84,29 +84,26 @@ Before writing any content, score and shortlist the articles from Step 2. Do not
 - Publication date outside the target period
 - Story has no connection to a brand or market confirmed in `context/abc-context.txt`
 
-**Stage 2: Score each passing article on three dimensions (1–3 each)**
+**Stage 2: Score each passing article using the three dimensions below, then assign a 1–5 relevance score using editorial judgement**
 
-*Brand proximity*
-- 3: Toyota, Lexus, BYD, MG Motor, GAC Motor, Zeekr, or Farizon directly named. Verify in `context/abc-context.txt`.
-- 2: A brand competing against ABC-distributed brands in the same markets.
-- 1: Market-wide or regulatory development, no specific brand named.
+Use the dimensions as a guide — the score is not calculated from a formula.
 
-*Geographic proximity*
-- 3: Saudi Arabia, Turkey, Egypt, or Morocco (ABC's primary markets).
-- 2: UAE, Italy, Poland, or UK (ABC's secondary or emerging markets).
-- 1: Pan-Europe, Pan-MENA, or global with a named regional implication.
+| Score | When to use |
+|---|---|
+| 5 | Story directly involves an ABC brand partner in a primary ABC market and requires immediate action |
+| 4 | Story involves an ABC brand or primary market with a clear near-term implication |
+| 3 | Story is relevant to ABC's competitive context or markets, indirect or longer-term implication |
+| 2 | Story is informational, weak connection to ABC |
+| 1 | Peripheral — only include to fill a coverage gap |
 
-*Time horizon*
-- 3: Decision needed within 4 weeks. → Assign **Act & Escalate**
-- 2: Decision needed within 1–2 quarters. → Assign **Assess**
-- 1: Informational, no near-term decision needed. → Assign **FYI**
-
-Sum the three dimension scores. Round to nearest integer on a 1–5 scale for the `relevance` field.
+*Brand proximity:* Does it directly name an ABC brand partner (Toyota, Lexus, BYD, MG, GAC, Zeekr, Farizon)? A competing brand? Or neither?
+*Geographic proximity:* Saudi Arabia, Turkey, Egypt, Morocco (primary)? UAE, Italy, Poland, UK (secondary)? Or broader?
+*Time horizon → Action type:* Decision needed within 4 weeks = **Act & Escalate** · within 1–2 quarters = **Assess** · informational = **FYI**
 
 **Stage 3: Shortlist to 12 items**
 1. Sort by relevance score descending.
 2. Ensure at least 1 item from each of the 6 areas of interest. Replace the lowest-scoring item with the best available from any uncovered topic.
-3. Ensure at least 4 MENA-primary items and at least 4 Europe-primary items.
+3. Ensure at least 4 items with a primary MENA geography tag OR a MENA market named in their soWhat. Ensure at least 4 items with a primary Europe geography tag.
 4. Ensure at least 1 Act & Escalate item. If none qualify, reassess the strongest item and justify the upgrade.
 5. If two articles cover the same story, keep the higher-scoring one and replace the other.
 

@@ -198,15 +198,21 @@ For each period, find 8–12 real articles relevant to ABC's markets (Middle Eas
 
 **Before writing any content, apply the selection criteria:**
 
-Score each article on three dimensions (1–3 each):
+Use the three dimensions below as a guide, then assign a 1–5 relevance score using editorial judgement. The score is not calculated from a formula.
 
-| Dimension | 3 | 2 | 1 |
-|---|---|---|---|
-| Brand proximity | Toyota, Lexus, or confirmed ABC Chinese brand partner (BYD, MG, GAC, Zeekr, Farizon) — verify in `context/abc-context.txt` | Competing brand in same market as ABC | Market-wide trend, no specific brand |
-| Geographic proximity | Saudi Arabia, Turkey, Egypt, Morocco (primary ABC markets) | UAE, Italy, Poland, UK (secondary/emerging) | Pan-Europe, Pan-MENA, or global with named regional angle |
-| Time horizon | Decision needed within 4 weeks → **Act & Escalate** | Decision needed within 1–2 quarters → **Assess** | Informational, no near-term decision → **FYI** |
+| Score | When to use |
+|---|---|
+| 5 | Story directly involves an ABC brand partner in a primary ABC market, immediate action needed |
+| 4 | Story involves an ABC brand or primary market with a clear near-term implication |
+| 3 | Relevant to ABC's competitive context or markets, indirect or longer-term |
+| 2 | Informational, weak connection to ABC |
+| 1 | Peripheral — only include to fill a coverage gap |
 
-Sum the three scores. Round to 1–5 for the `relevance` field. Sort by score descending. Then apply coverage constraints: at least 1 item per area of interest, at least 4 MENA items, at least 4 Europe items, at least 1 Act & Escalate per edition. Fill 12 items per edition.
+*Brand proximity:* ABC brand partner directly named (Toyota, Lexus, BYD, MG, GAC, Zeekr, Farizon — verify in `context/abc-context.txt`)? Competing brand? Or market-wide?
+*Geographic proximity:* Primary ABC market (Saudi Arabia, Turkey, Egypt, Morocco)? Secondary (UAE, Italy, Poland, UK)? Or broader?
+*Time horizon → Action type:* 4 weeks = **Act & Escalate** · 1–2 quarters = **Assess** · informational = **FYI**
+
+Sort by score descending. Coverage constraints: at least 1 item per area of interest, at least 4 items with a primary MENA geography tag OR a MENA market named in their soWhat, at least 4 Europe-primary items, at least 1 Act & Escalate per edition. Fill 12 items per edition.
 
 Order the final items: Act & Escalate first (by score), then Assess (by score), then FYI (by score). Ties: MENA before Europe.
 

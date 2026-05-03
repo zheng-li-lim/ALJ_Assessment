@@ -205,29 +205,25 @@ An article is excluded if it fails any of the following. There is no scoring at 
 
 **Stage 2: Relevance scoring (1–5)**
 
-Each article that passes Stage 1 is scored on three dimensions. The scores are summed and rounded to the nearest integer on a 1–5 scale.
+Use the three dimensions below as a guide, then assign a 1–5 relevance score using editorial judgement. The score is not calculated from a formula — the dimensions inform the decision.
 
-**Brand proximity**
-- 3 pts: Story directly involves Toyota, Lexus, or a confirmed ABC Chinese brand partner (BYD, MG Motor, GAC Motor, Zeekr, Farizon). Verify against `context/abc-context.txt`.
-- 2 pts: Story involves a brand competing directly against ABC-distributed brands in the same markets.
-- 1 pt: Story is a market-wide or regulatory development with no specific named brand.
+| Score | When to use |
+|---|---|
+| 5 | The story directly involves an ABC brand partner in a primary ABC market and requires immediate action. |
+| 4 | The story involves an ABC brand or primary market with a clear near-term implication. |
+| 3 | The story is relevant to ABC's competitive context or markets, with an indirect or longer-term implication. |
+| 2 | The story is informational but the connection to ABC is weak. |
+| 1 | Peripheral — include only to fill a coverage gap. |
 
-**Geographic proximity**
-- 3 pts: Story is set in Saudi Arabia, Turkey, Egypt, or Morocco (ABC's primary distribution markets).
-- 2 pts: Story is set in UAE, Italy, Poland, or the UK (ABC's secondary or emerging markets).
-- 1 pt: Story is Pan-Europe, Pan-MENA, or a global development with a named MENA or Europe implication.
+**The three dimensions to consider:**
 
-**Time horizon**
-- 3 pts: A decision or response is needed within 4 weeks. Financial, competitive, or regulatory impact is material and immediate.
-- 2 pts: Implication is clear but the decision point is 1–2 quarters away.
-- 1 pt: Informational. The trend is relevant but no decision is required in the near term.
+*Brand proximity:* Does the story directly involve an ABC brand partner (Toyota, Lexus, BYD, MG, GAC, Zeekr, Farizon)? Or a brand competing against them? Or neither?
 
-Items with a combined score below 3 are not included unless required to fill a topic coverage gap (Stage 3 below).
+*Geographic proximity:* Does the story happen in or directly affect Saudi Arabia, Turkey, Egypt, or Morocco (primary markets)? UAE, Italy, Poland, or UK (secondary markets)? Or is it broader?
 
-**Action type is derived from time horizon:**
-- Time horizon 3 pts = Act & Escalate
-- Time horizon 2 pts = Assess
-- Time horizon 1 pt = FYI
+*Time horizon:* Does ABC need to act within 4 weeks (Act & Escalate), within 1–2 quarters (Assess), or is it informational for now (FYI)?
+
+Items scoring 1–2 are not included unless required to fill a topic coverage gap.
 
 ---
 
@@ -236,7 +232,7 @@ Items with a combined score below 3 are not included unless required to fill a t
 Sort all passing items by relevance score descending. Then apply coverage constraints in order:
 
 1. **Topic coverage:** At least 1 item from each of the 6 areas of interest must be included. If the top 12 by score leave a topic uncovered, replace the lowest-scoring item with the highest-scoring item from the missing topic.
-2. **Geographic balance:** At least 4 items must have a primary MENA geography. At least 4 items must have a primary Europe geography.
+2. **Geographic balance:** At least 4 items must have a primary MENA geography tag OR name a MENA market in their soWhat. At least 4 items must have a primary Europe geography tag. This allows European-origin stories with direct MENA business implications to count toward the MENA balance.
 3. **Action balance:** At least 1 Act & Escalate item must appear per edition. If none score high enough on time horizon, reassess the strongest item and justify the upgrade.
 4. **Duplication:** If two items cover the same underlying story, keep the one with the stronger so-what and higher score. Remove the weaker item and replace it with the next highest-scoring item not yet included.
 
@@ -322,7 +318,7 @@ This version is a static web application. It requires no server, no database, an
 Five additions would make this production-ready. See `README.md` for the full description of each.
 
 1. Scheduled API calls for automated news refresh and quality checks
-2. Live sales data from primary sources (ACEA, SMMT, JATO)
+2. Live sales data from primary sources (ACEA, SMMT, JATO), integrated with ABC's internal sales, inventory, and dealer performance data. Cross-referencing external market data with internal figures would refine the brand-market context file automatically and produce more specific so-what analysis. Real-time news matched against live sales trends would surface correlations that a static dataset cannot.
 3. An orchestrating agent managing the full pipeline with a single author approval step
 4. Specialist agents for Sales, Commercial, and Country Head functions generating parallel so-whats
 5. Engagement tracking feeding reader behaviour back into classification priorities
