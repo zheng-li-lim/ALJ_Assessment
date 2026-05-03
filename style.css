@@ -817,6 +817,21 @@ body::after {
 /* ── Utility ─────────────────────────────────────────────────────────── */
 .hidden { display: none !important; }
 
+/* ── Mobile notice ───────────────────────────────────────────────────── */
+.mobile-notice { display: none; }
+@media (max-width: 860px) {
+  .mobile-notice {
+    display: block;
+    background: var(--navy);
+    color: rgba(255,255,255,0.8);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 16px;
+    letter-spacing: 0.01em;
+  }
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 860px) {
   #intelligence-layout { grid-template-columns: 1fr; padding: 24px 16px; }
@@ -825,7 +840,8 @@ body::after {
   .btn-header-action span { display: none; }
   .btn-header-action { padding: 7px 10px; }
 
-  /* Filter bar — tighter stacking */
+  /* Filter bar — scroll with page on mobile to avoid covering cards */
+  #filter-bar { position: static; box-shadow: none; }
   .filter-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 10px 16px; }
   .filter-group-areas { width: 100%; }
   .area-pills { gap: 5px; }

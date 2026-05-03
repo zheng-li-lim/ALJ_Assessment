@@ -4,6 +4,8 @@
 
 ABC is a hypothetical vehicle distribution company for this assessment, modelled on a real international automotive group with operations in the Middle East and Europe.
 
+**Desktop recommended.** The brief is designed for desktop viewing. Mobile will render but some layout elements are limited.
+
 ---
 
 ## What it does
@@ -14,8 +16,8 @@ A fortnightly automotive intelligence brief for ABC's leadership and strategy te
 
 **Action levels:**
 - **FYI**: worth knowing, no immediate action needed
-- **Assess**: warrants analysis before decision
-- **Act & Escalate**: highly likely to require a leadership response, immediate analysis required
+- **Assess**: warrants analysis before a decision
+- **Act & Escalate**: requires a leadership response
 
 **The brief also includes:**
 - An executive summary at the top of each edition
@@ -23,7 +25,7 @@ A fortnightly automotive intelligence brief for ABC's leadership and strategy te
 - Past editions readily available for reference
 - A fact-check layer and a CSO review layer on each item
 - A European car sales data tab covering 2023 to 2025
-- One-click email export for easy newsletter sharing
+- One-click email export
 
 ---
 
